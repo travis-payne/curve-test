@@ -1,7 +1,8 @@
 import { runIngestion } from './ingestion';
+import logger from './utils/logger';
 
 runIngestion().then(() => {
-    console.log('Ingestion completed');
+    logger.info('Ingestion completed');
 }).catch((error) => {
-    console.error('Ingestion failed', error);
+    logger.error('Ingestion failed', error);
 });

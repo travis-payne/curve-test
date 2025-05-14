@@ -11,7 +11,6 @@ import mongoose from 'mongoose';
 
 async function runIngestion() {
 
-    console.log('Connecting to DB, with URI: ', MONGODB_URI);
     await connectToDB();
     await createContractOneIfNotExists();
     
