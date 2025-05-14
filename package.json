@@ -1,0 +1,35 @@
+{
+  "name": "curve-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
+    "debug": "node --inspect-brk -r ts-node/register src/index.ts",
+    "test": "mocha -r ts-node/register \"tests/**/*.test.ts\" \"tests/*.test.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mongoose": "8.14.1",
+    "winston": "^3.17.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/chai": "5.2.2",
+    "@types/chai-as-promised": "8.0.2",
+    "@types/mocha": "10.0.10",
+    "@types/node": "22.15.17",
+    "@types/sinon": "17.0.4",
+    "chai": "5.2.0",
+    "chai-as-promised": "8.0.1",
+    "mocha": "11.2.2",
+    "nodemon": "3.1.10",
+    "sinon": "20.0.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.3"
+  }
+}

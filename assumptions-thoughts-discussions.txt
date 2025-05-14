@@ -1,0 +1,17 @@
+- Contract names are unique, realistically, we would find the product requirements, and if they can be identical, generate an ID for them. (although mongo does this anyway)
+- ISRC is International Standard Recording Codes, are unique, 12 character alphanumericals, technically the ones in the test sheet would be incorrect
+- DB connection details would come from a .env file, written to via some form of secret keeper
+- Hard to tell if this is neccesary, but we're going to validate the headers on the off chance one of the columns is missing, could help users identify errors earlier
+- We're also assuming the sheet is called "Sheet 1", we could also just iterate through the sheets
+- Wasn't part of the spec, but updatedAt/createdAt could be very useful, for audit reasons, debugging
+- Unsure of requirements on handling tracks that have an existing ID (and therefore not new tracks), so if the ID does not exist, save as new, else update
+- In a live environment, we wouldn't assume the excel filename.
+- We could extend this for csvs
+- Mocha for testing, chai for assertis, sinon for mocks/spies, might've been better to use jest
+- Further modularity, index file could be broken up more!
+- Not writing tests to ensure other libraries functionality.
+- Load in memory vs streaming
+- Mongo DB Indexes
+- Dockerize!
+- Generate way more test data to performance/sanity test
+- No recent excel libraries on NPM
